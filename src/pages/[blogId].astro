@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getBlogDetail, getBlogs } from "../libs/microcms";
+
+export async function getStaticPaths(){
+    const response = await getBlogs({fields: "id"});
+    return response.contents.map((blog:any)=>({
+        params:{
+            blogId: blog.id,
+        },
+    }));
+}
+
+const blogId= Astro.params;
+const blog = await getBlogDetail(blogId as unknown as string);
+---
+<Layout title="ASAHI NO NIWA">
+
+</Layout>
