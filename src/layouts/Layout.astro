@@ -1,8 +1,8 @@
 ---
-import SiteHeader from '../components/SiteHeader.astro';
+import SiteHeader from "../components/SiteHeader.astro";
 
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -10,35 +10,35 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<SiteHeader />
-		<main class="ps-2 pe-2 pt-8 w-full sm:w-11/12 sm:max-w-5xl sm:ms-auto sm:me-auto sm:pe-auto">
-			<slot />
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <SiteHeader />
+    <main class="ps-2 pe-2 pt-8 w-full sm:w-11/12 sm:max-w-5xl sm:ms-auto sm:me-auto sm:pe-auto">
+      <slot />
+    </main>
+  </body>
 </html>
 <style is:global>
-	/* :root {
+  /* :root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	} */
-	* {
-		font-family: "BIZ UDGothic","ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",sans-serif;
-		color: #333333;
-	}
+  * {
+    font-family: "BIZ UDGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
+    color: #333333;
+  }
 
-	html{
-		background-color: #F6F6F6;
-		letter-spacing: 0.025em;
-	}
-	code {
-		font-family: "BIZ UDGothic","ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN",sans-serif;
-	}
+  html {
+    background-color: #f6f6f6;
+    letter-spacing: 0.025em;
+  }
+  code {
+    font-family: "BIZ UDGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
+  }
 </style>

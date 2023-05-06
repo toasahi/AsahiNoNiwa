@@ -1,18 +1,15 @@
-import { MicroCMSQueries, createClient } from 'microcms-js-sdk';
+import { MicroCMSQueries, createClient } from "microcms-js-sdk";
 
 export const client = createClient({
-  serviceDomain: import.meta.env.SECRET_SERVICE_DOMAIN,  
+  serviceDomain: import.meta.env.SECRET_SERVICE_DOMAIN,
   apiKey: import.meta.env.SECRET_API_KEY,
 });
 
-export const getBlogs = async (queries:MicroCMSQueries) => {
-  return await client.get({endpoint:'blogs',queries});
-}
+export const getBlogs = async (queries: MicroCMSQueries) => {
+  return await client.get({ endpoint: "blogs", queries });
+};
 
-export const getBlogDetail = async (
-  contentId: string,
-  queries?: MicroCMSQueries
-) => {
+export const getBlogDetail = async (contentId: string, queries?: MicroCMSQueries) => {
   return await client.getListDetail({
     endpoint: "blogs",
     contentId,
