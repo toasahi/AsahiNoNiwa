@@ -19,7 +19,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<SiteHeader />
-		<slot />
+		<main class="ps-2 pe-2 pt-8 w-full sm:w-11/12 sm:max-w-5xl sm:ms-auto sm:me-auto sm:pe-auto">
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
