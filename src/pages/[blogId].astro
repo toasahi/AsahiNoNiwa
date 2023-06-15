@@ -16,6 +16,6 @@ const blog = await getBlogDetail(blogId as string);
 ---
 
 <Layout title="ASAHI NO NIWA">
-  <img src={blog.eyecatch.url} class="rounded-sm w-full h-full object-cover shadow-md aspect-[16/9]" />
+  <img src={blog.eyecatch.url} class="rounded-sm w-full h-full object-cover shadow-md aspect-[16/9] sm:aspect-[2/1]" />
   <div class="leading-relaxed tracking-widest" set:html={blog.content} />
 </Layout>
