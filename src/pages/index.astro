@@ -1,29 +1,33 @@
 ---
 import { Tags } from "tabler-icons-react";
 
-import Layout from '../layouts/Layout.astro';
-import { getBlogs } from '../libs/microcms';
+import Layout from "../layouts/Layout.astro";
+import { getBlogs } from "../libs/microcms";
 
-const response = await getBlogs({fields:["id","title","eyecatch","category"]})
+const response = await getBlogs({ fields: ["id", "title", "eyecatch", "category"] });
 ---
 
 <Layout title="ASAHI NO NIWA">
-		<section class="grid grid-cols-postCard gap-x-5 gap-y-3.5 sm:grid-cols-15 sm:gap-12">
-			{response.contents.map((blog:any)=>(
-				<article class="flex flex-col gap-1 sm:gap-2">
-					<figure>
-						<a href={blog.id}>
-							<img src={blog.eyecatch.url} class="rounded-sm w-full h-full object-cover shadow-md aspect-[16/9]"/>
-						</a>
-					</figure>
-					<div class="flex items-center gap-2">
-        				<Tags size={"1.2rem"} color="#9CA3AF"/>
-						<a href="/" class="text-gray-400 text-sm">{blog.category.name}</a>
-    				</div>
-					<a href={blog.id}>
-						<h2 class="font-bold text-lg">{blog.title}</h2>
-					</a>
-				</article>
-			))}
-		</section>
+  <section class="grid grid-cols-postCard gap-x-5 gap-y-3.5 sm:grid-cols-15 sm:gap-12">
+    {
+      response.contents.map((blog: any) => (
+        <article class="flex flex-col gap-1 sm:gap-2">
+          <figure>
+            <a href={blog.id}>
+              <img src={blog.eyecatch.url} class="rounded-sm w-full h-full object-cover shadow-md aspect-[16/9]" />
+            </a>
+          </figure>
+          <div class="flex items-center gap-2">
+            <Tags size={"1.2rem"} color="#9CA3AF" />
+            <a href="/" class="text-gray-400 text-sm">
+              {blog.category.name}
+            </a>
+          </div>
+          <a href={blog.id}>
+            <h2 class="font-bold text-lg">{blog.title}</h2>
+          </a>
+        </article>
+      ))
+    }
+  </section>
 </Layout>
