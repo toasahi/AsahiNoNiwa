@@ -4,8 +4,8 @@ import { g as deserializeManifest } from "./chunks/astro.80953456.mjs";
 import "react";
 import "react-dom/server";
 
-const _page0 = () => import("./chunks/index@_@astro.57e21e2a.mjs");
-const _page1 = () => import("./chunks/_blogId_@_@astro.2d869f59.mjs");
+const _page0 = () => import("./chunks/index@_@astro.c5385a4c.mjs");
+const _page1 = () => import("./chunks/_blogId_@_@astro.ef500367.mjs");
 const pageMap = new Map([
   ["src/pages/index.astro", _page0],
   ["src/pages/[blogId].astro", _page1],
@@ -32,7 +32,7 @@ const _manifest = Object.assign(
       ["only", '(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();'],
       ["visible", '(()=>{var r=(s,c,i)=>{let o=async()=>{await(await s())()},n=new IntersectionObserver(e=>{for(let t of e)if(t.isIntersecting){n.disconnect(),o();break}});for(let e=0;e<i.children.length;e++){let t=i.children[e];n.observe(t)}};(self.Astro||(self.Astro={})).visible=r;window.dispatchEvent(new Event("astro:visible"));})();'],
     ],
-    entryModules: { "\u0000@astrojs-ssr-virtual-entry": "_@astrojs-ssr-virtual-entry.mjs", "\u0000@astro-renderers": "renderers.mjs", "/src/pages/index.astro": "chunks/pages/index.astro.74a592aa.mjs", "\u0000@astro-page:src/pages/index@_@astro": "chunks/index@_@astro.57e21e2a.mjs", "\u0000@astro-page:src/pages/[blogId]@_@astro": "chunks/_blogId_@_@astro.2d869f59.mjs", "@astrojs/react/client.js": "_astro/client.9291133d.js", "astro:scripts/before-hydration.js": "" },
+    entryModules: { "\u0000@astrojs-ssr-virtual-entry": "_@astrojs-ssr-virtual-entry.mjs", "\u0000@astro-renderers": "renderers.mjs", "/src/pages/index.astro": "chunks/pages/index.astro.94760fde.mjs", "\u0000@astro-page:src/pages/index@_@astro": "chunks/index@_@astro.c5385a4c.mjs", "\u0000@astro-page:src/pages/[blogId]@_@astro": "chunks/_blogId_@_@astro.ef500367.mjs", "@astrojs/react/client.js": "_astro/client.9291133d.js", "astro:scripts/before-hydration.js": "" },
     assets: ["/_astro/_blogId_.a9535f06.css", "/favicon.svg", "/_astro/client.9291133d.js"],
   }),
   {

@@ -14,7 +14,7 @@ const response = await getBlogs({ fields: ["id", "title", "eyecatch", "category"
         <article class="flex flex-col gap-1 sm:gap-2">
           <figure>
             <a href={blog.id}>
-              <img src={blog.eyecatch.url} class="rounded-sm w-full h-full object-cover shadow-md aspect-[16/9]" />
+              <img src={blog.eyecatch.url} class="rounded-sm w-full h-full object-cover shadow-md aspect-[16/9]" alt="技術画像" />
             </a>
           </figure>
           <div class="flex items-center gap-2">
