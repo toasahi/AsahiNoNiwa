@@ -17,7 +17,12 @@ export async function getStaticPaths() {
 }
 
 const { blogId } = Astro.params;
-const blog = await getBlogDetail(blogId as string);
+
+if (!blogId) {
+  throw Error();
+}
+
+const blog = await getBlogDetail(blogId);
 ---
 
 <Layout title="ASAHI NO NIWA">
